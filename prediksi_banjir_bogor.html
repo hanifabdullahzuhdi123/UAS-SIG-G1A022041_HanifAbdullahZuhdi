@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c6671662c865d233c58a0206d2f3dbaa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 50px; left: 50px; width: 200px; height: 100px;
+     background-color: white; z-index:9999; font-size:14px; border:2px solid grey; padding: 10px">
+    <b>Keterangan:</b><br>
+    <i style="color:green">&#9632;</i> Rawan Rendah<br>
+    <i style="color:orange">&#9632;</i> Rawan Sedang<br>
+    <i style="color:red">&#9632;</i> Rawan Tinggi
+</div>
+    
+            <div class="folium-map" id="map_c6671662c865d233c58a0206d2f3dbaa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c6671662c865d233c58a0206d2f3dbaa = L.map(
+                "map_c6671662c865d233c58a0206d2f3dbaa",
+                {
+                    center: [-6.6, 106.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2795c9fdeede9ba5be895536598abaac = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2795c9fdeede9ba5be895536598abaac.addTo(map_c6671662c865d233c58a0206d2f3dbaa);
+        
+    
+            var marker_cluster_ed111eec08428ba320c4409b6250d9dd = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var rectangle_283fe11f669258657342270d7d2d189c = L.rectangle(
+                [[-6.595065716939775, 106.82658425631016], [-6.585065716939775, 106.83658425631015]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ed111eec08428ba320c4409b6250d9dd);
+        
+    
+        var popup_1e945bc7f4108ce597ad9bfc4ac2df0f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_457328aa798619e1a9d1d6ed150e25e3 = $(`<div id="html_457328aa798619e1a9d1d6ed150e25e3" style="width: 100.0%; height: 100.0%;"><b>Bogor Barat</b><br>Prediksi: Tinggi</div>`)[0];
+                popup_1e945bc7f4108ce597ad9bfc4ac2df0f.setContent(html_457328aa798619e1a9d1d6ed150e25e3);
+            
+        
+
+        rectangle_283fe11f669258657342270d7d2d189c.bindPopup(popup_1e945bc7f4108ce597ad9bfc4ac2df0f)
+        ;
+
+        
+    
+    
+            var rectangle_0507ada95bf9826c486928208b39eed8 = L.rectangle(
+                [[-6.607765286023423, 106.81034869458306], [-6.5977652860234235, 106.82034869458305]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ed111eec08428ba320c4409b6250d9dd);
+        
+    
+        var popup_d6218051562ee0dc6c1f4772b6a6a797 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_50179951040aa18fa048018666155f40 = $(`<div id="html_50179951040aa18fa048018666155f40" style="width: 100.0%; height: 100.0%;"><b>Bogor Selatan</b><br>Prediksi: Rendah</div>`)[0];
+                popup_d6218051562ee0dc6c1f4772b6a6a797.setContent(html_50179951040aa18fa048018666155f40);
+            
+        
+
+        rectangle_0507ada95bf9826c486928208b39eed8.bindPopup(popup_d6218051562ee0dc6c1f4772b6a6a797)
+        ;
+
+        
+    
+    
+            var rectangle_872cc4718749317e81f473113d223303 = L.rectangle(
+                [[-6.592046229237986, 106.78561051228131], [-6.582046229237986, 106.7956105122813]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ed111eec08428ba320c4409b6250d9dd);
+        
+    
+        var popup_fdd2ece1a1f54422ba1315d2eac2e202 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ddd424e2976977987db2b3a982996e46 = $(`<div id="html_ddd424e2976977987db2b3a982996e46" style="width: 100.0%; height: 100.0%;"><b>Bogor Tengah</b><br>Prediksi: Rendah</div>`)[0];
+                popup_fdd2ece1a1f54422ba1315d2eac2e202.setContent(html_ddd424e2976977987db2b3a982996e46);
+            
+        
+
+        rectangle_872cc4718749317e81f473113d223303.bindPopup(popup_fdd2ece1a1f54422ba1315d2eac2e202)
+        ;
+
+        
+    
+    
+            var rectangle_bc892df3451bca8964e4471e0db0aef9 = L.rectangle(
+                [[-6.574539402871839, 106.80585120087171], [-6.564539402871839, 106.8158512008717]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ed111eec08428ba320c4409b6250d9dd);
+        
+    
+        var popup_b75cca70da72bd6bb382b3c88454dd1b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d691ab6799ca42d22acbf79ea9a2eee5 = $(`<div id="html_d691ab6799ca42d22acbf79ea9a2eee5" style="width: 100.0%; height: 100.0%;"><b>Bogor Timur</b><br>Prediksi: Sedang</div>`)[0];
+                popup_b75cca70da72bd6bb382b3c88454dd1b.setContent(html_d691ab6799ca42d22acbf79ea9a2eee5);
+            
+        
+
+        rectangle_bc892df3451bca8964e4471e0db0aef9.bindPopup(popup_b75cca70da72bd6bb382b3c88454dd1b)
+        ;
+
+        
+    
+    
+            var rectangle_dc95daa7948c4879c2e96d544d95d987 = L.rectangle(
+                [[-6.609683067494466, 106.78573164614376], [-6.599683067494467, 106.79573164614375]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ed111eec08428ba320c4409b6250d9dd);
+        
+    
+        var popup_243d66e93cce3062a4d84be52d71a4a4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3e31e081db901faffc7862146990489b = $(`<div id="html_3e31e081db901faffc7862146990489b" style="width: 100.0%; height: 100.0%;"><b>Bogor Utara</b><br>Prediksi: Tinggi</div>`)[0];
+                popup_243d66e93cce3062a4d84be52d71a4a4.setContent(html_3e31e081db901faffc7862146990489b);
+            
+        
+
+        rectangle_dc95daa7948c4879c2e96d544d95d987.bindPopup(popup_243d66e93cce3062a4d84be52d71a4a4)
+        ;
+
+        
+    
+    
+            var rectangle_616bea26732c900e65b6a269415edf63 = L.rectangle(
+                [[-6.609682739138983, 106.7856854049286], [-6.599682739138983, 106.79568540492859]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ed111eec08428ba320c4409b6250d9dd);
+        
+    
+        var popup_35d2885796bf1390a13209eb5eec7469 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_147755385dbda99ad00831763d3b484d = $(`<div id="html_147755385dbda99ad00831763d3b484d" style="width: 100.0%; height: 100.0%;"><b>Tanah Sareal</b><br>Prediksi: Sedang</div>`)[0];
+                popup_35d2885796bf1390a13209eb5eec7469.setContent(html_147755385dbda99ad00831763d3b484d);
+            
+        
+
+        rectangle_616bea26732c900e65b6a269415edf63.bindPopup(popup_35d2885796bf1390a13209eb5eec7469)
+        ;
+
+        
+    
+    
+            marker_cluster_ed111eec08428ba320c4409b6250d9dd.addTo(map_c6671662c865d233c58a0206d2f3dbaa);
+        
+</script>
+</html>
